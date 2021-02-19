@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Chat';
+  chatPanel = false;
+  loginPanel = true;
+  nickname: string;
+
+  ConnectChat(): void {
+    this.loginPanel = false;
+    this.chatPanel = true;
+  }
 }

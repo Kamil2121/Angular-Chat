@@ -1,0 +1,11 @@
+<div class="chat-messages">
+  <div class="chat-messages-show-container">
+    <ul class="chat-messages-show-list">
+      <li class="message-design" *ngFor="let msg of messageList"><span style="color: red;">{{msg.nickname}}</span>{{msg.contents}}</li>
+    </ul>
+  </div>
+  <div class="chat-messages-create-container">
+    <input class="chat-messages-create-input" type="text" [(ngModel)]="contents">
+    <button class="chat-messages-create-button" (click)="SendMessage()"> Send </button>
+  </div>
+</div>
