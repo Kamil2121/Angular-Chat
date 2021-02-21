@@ -1,8 +1,12 @@
-Czat
-<div>
-  <div class="chat-messages-create-container" *ngIf="loginPanel">
+<div class="main-container">
+  <div class="form" *ngIf="loginPanel">
+    <h1 class="title">What's your nickname?</h1>
+    <input class="usernameInput" type="text" maxlength="15" [(ngModel)]="nickname" />
+    <div class="connect" (click)="ConnectChat()">Connect</div>
+  </div>
+  <!--<div class="chat-messages-create-container" *ngIf="loginPanel">
     <input class="chat-messages-create-input" type="text" [(ngModel)]="nickname">
     <button class="chat-messages-create-button" (click)="ConnectChat()"> Connect </button>
-  </div>
+  </div>-->
   <app-chat-box *ngIf="chatPanel" nickname='{{nickname}}'></app-chat-box>
 </div>
