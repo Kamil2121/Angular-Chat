@@ -4,9 +4,5 @@
     <input class="usernameInput" (keyup.Enter)="ConnectChat()" type="text" maxlength="15" [(ngModel)]="nickname" />
     <div class="connect" (click)="ConnectChat()">Connect</div>
   </div>
-  <!--<div class="chat-messages-create-container" *ngIf="loginPanel">
-    <input class="chat-messages-create-input" type="text" [(ngModel)]="nickname">
-    <button class="chat-messages-create-button" (click)="ConnectChat()"> Connect </button>
-  </div>-->
   <app-chat-box *ngIf="chatPanel" nickname='{{nickname}}'></app-chat-box>
 </div>

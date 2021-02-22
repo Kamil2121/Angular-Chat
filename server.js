@@ -18,7 +18,6 @@ io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('message', (msg) => {
     console.log(msg);
-    // socket.broadcast.emit('message-broadcast', msg);
     io.emit('message-broadcast', msg);
   });
 
