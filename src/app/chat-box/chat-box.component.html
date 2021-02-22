@@ -1,10 +1,10 @@
 <div class="chat">
   <div class="chat-messages-show">
-    <ul>
+    <ul id="messageList">
       <li *ngFor="let msg of messageList"><span>{{msg.nickname}}</span>{{msg.contents}}</li>
     </ul>
     <div class="chat-messages-create">
-      <textarea [(ngModel)]="contents"></textarea>
+      <textarea [(ngModel)]="contents" (keyup.Enter)="SendMessage()"></textarea>
       <button (click)="SendMessage()"> Send </button>
     </div>
   </div>
